@@ -110,13 +110,6 @@ header {
     letter-spacing: 0%;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .informacao-1, .informacao-2, .informacao-3, .informacao-4 {
     display: flex;
     flex-direction: column;
