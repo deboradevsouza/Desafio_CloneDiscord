@@ -110,5 +110,84 @@ header {
     letter-spacing: 0%;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informacao-1, .informacao-2, .informacao-3, .informacao-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;      /* 90% da largura da viewport */
+    max-width: 428px; /* Limite máximo */
+    height: auto;     /* Altura automática */
+    min-height: 200px;
+    gap: 24px;
+    padding: 40px 24px 40px 24px;
+}
+
+#img-discord {
+    width: 379px;
+    height: 252px;
+    padding: 16px 8px 16px 8px;
+}
+
+#titulo-main {
+    display: flex; 
+    align-self: flex-start;
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    size: 24px;
+    color: var(--secondary-color);
+    }
+
+#descricao-main {
+    display: flex; 
+    align-self: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 381px;
+    height: auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    color: var(--secondary-color);
+    }
+
+.informacao-2, .informacao-4 {
+    background-color: #F6F6F6;
+}
+
+#titulo-main-4 {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: 32px;
+    color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo-discord {
+    width: 162px;
+    height: 30.77px;
+}
+
+
+
 
 
