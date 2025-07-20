@@ -20,7 +20,11 @@ header {
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
-    background-image: url('./assets/Header\ Background.png')
+    background-image: url('./assets/Header\ Background.png');
+    width: 100vw;
+    min-width: 100vw;
+    box-sizing: border-box;
+    grid-column: 1 / -1;
 }
 
 .conteudo-header {
@@ -28,8 +32,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 90vw;      /* 90% da largura da viewport */
-    max-width: 428px; /* Limite máximo */
+    width: 100vw;      /* 90% da largura da viewport */
     height: auto;     /* Altura automática */
     min-height: 200px;
     margin: 24px;
@@ -53,7 +56,6 @@ header {
     align-self: flex-start;
     justify-content: center;
     width: 100%;
-    max-width: 381px;
     height: auto;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -70,7 +72,6 @@ header {
     align-self: flex-start;
     justify-content: space-between;
     width: 100%;
-    max-width: 381px;
     height: auto;
     gap: 16px;
 }
@@ -80,7 +81,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 381px;
     height: auto;
     min-height: 54px;
     border-radius: 28px;
@@ -115,8 +115,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 90vw;      /* 90% da largura da viewport */
-    max-width: 428px; /* Limite máximo */
+    width: 100%;      /* 90% da largura da viewport */
     height: auto;     /* Altura automática */
     min-height: 200px;
     gap: 24px;
@@ -182,10 +181,11 @@ footer {
 
 @media (min-width: 450px) {
 
-body {
+html, body {
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: 459px, repeat(3, 448px), 744px, 134px;
+width: 100%;
+grid-template-rows: 459px repeat(3, 448px) 744px 134px;
 }
 
 header {
@@ -193,25 +193,25 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-image: url('./assets/Header\ Background\ \(1\).png')
-
 }
 
 .conteudo-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
     justify-content: space-between;
+    align-items: center;
+    max-width: 757px;
+    background-size: cover;
 }
 
 #titulo {
-    display: flex; 
+    display: flex;
     align-self: center;
-    width: 100%;
-    max-width: 278px;
-    height: auto;
+    text-align: center;
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
     color: #FFFFFF;
@@ -219,8 +219,9 @@ header {
 
 #descricao-titulo {
     display: flex; 
-    align-self: flex-start;
+    align-self: center;
     justify-content: center;
+    text-align: center;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -231,11 +232,12 @@ header {
 
 .conteudo-header-botoes {
     display: flex;
+    align-self: center;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     max-width: 502px;
-    height: 44px;
+    max-height: 44px;
     gap: 16px;
 }
 
@@ -243,10 +245,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 381px;
-    height: auto;
-    min-height: 54px;
     border-radius: 28px;
     text-decoration: none;
     border: none;
@@ -276,32 +274,34 @@ header {
 
 .informacao-1, .informacao-2, .informacao-3, .informacao-4 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    justify-content: space-between;
-    width: 90vw;      /* 90% da largura da viewport */
-    max-width: 428px; /* Limite máximo */
-    height: auto;     /* Altura automática */
-    min-height: 200px;
-    gap: 24px;
-    padding: 40px 24px 40px 24px;
+    align-self: center;
+    width: 100%;
 }
 
 #img-discord {
-    width: 379px;
-    height: 252px;
+    width: 607px;
+    height: 394px;
     padding: 16px 8px 16px 8px;
+}
+
+.titulo_descricao_informacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #titulo-main {
     display: flex; 
     align-self: flex-start;
     width: 100%;
-    max-width: 370px;
-    height: auto;
+    max-height: 270px;
     font-family: "Open Sans", sans-serif;
     font-weight: 800;
-    size: 24px;
+    font-size: 40px;
     color: var(--secondary-color);
     }
 
